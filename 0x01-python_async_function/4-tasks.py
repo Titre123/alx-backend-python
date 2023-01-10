@@ -14,7 +14,7 @@ wait_random = __import__('0-basic_async_syntax').wait_random
 task_wait_random = __import__('3-tasks').task_wait_random
 
 
-async def wait_n(n: int, max_delay: int) -> list[float]:
+async def wait_n(n: int, max_delay: int) -> List[float]:
     '''
     Args:
         n -> int
