@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+
 '''
     Given the parameters and the return values, add type
     annotations to the function
@@ -22,3 +22,9 @@ def safely_get_value(dct: typing.Mapping, key: typing.Any, default:
         return dct[key]
     else:
         return default
+
+annotations = safely_get_value.__annotations__
+
+print("Here's what the mappings should look like")
+for k, v in annotations.items():
+    print( ("{}: {}".format(k, v)))
