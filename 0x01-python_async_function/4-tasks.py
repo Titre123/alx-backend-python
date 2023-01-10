@@ -23,5 +23,4 @@ async def wait_n(n: int, max_delay: int) -> List[float]:
     waited = await asyncio.gather(
         *tuple(map(lambda _: task_wait_random(max_delay), range(n)))
     )
-    task_wait_random(10)
     return sorted(waited)
